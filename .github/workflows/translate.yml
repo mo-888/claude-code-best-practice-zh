@@ -10,7 +10,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Checkout
-              uses: actions/checkout@v3
+              uses: actions/checkout@v4
               with:
                 fetch-depth: 3
 
@@ -18,6 +18,6 @@ jobs:
               uses: Lin-jun-xiang/action-translate-readme@v2 # Based on the tag
               with:
                 token: ${{ secrets.ACTION_BOT }} 
-                zhipuai: ${{ secrets.ZHIPUAI_API_KEY }} 
-                openai: "sk-dummy-key-to-bypass-error"
                 langs: "en,zh-TW,zh-CN,French,Arabic" # You can define any langs
+              env:
+                ZHIPUAI_API_KEY: ${{ secrets.ZHIPUAI_API_KEY }}
