@@ -21,3 +21,4 @@ jobs:
                 langs: "en,zh-TW,zh-CN,French,Arabic" # You can define any langs
               env:
                 ZHIPUAI_API_KEY: ${{ secrets.ZHIPUAI_API_KEY }}
+                OPENAI_API_KEY: "sk-dummy-placeholder"
